@@ -8,11 +8,5 @@ console.log("update vite configasd");
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/pwa/",
   plugins: [react(), VitePWA({ registerType: "autoUpdate" })],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
-    },
-  },
 });

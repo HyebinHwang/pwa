@@ -14,7 +14,7 @@ const theme = extendTheme({ config });
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <ChakraBaseProvider theme={theme}>
-    <BrowserRouter basename={"/pwa"}>
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </ChakraBaseProvider>
