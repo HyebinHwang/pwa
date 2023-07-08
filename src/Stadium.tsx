@@ -105,6 +105,13 @@ export default function Stadium() {
       setIsWaiting(true);
       setWinningCount(0);
       document.startViewTransition(() => navigate("/", {}));
+      Notification.requestPermission().then((result) => {
+        if (result === "granted") {
+          new Notification(
+            `방금 ${location.state.name}님이 ${winningCount}연승을 했습니다.`
+          );
+        }
+      });
     }, 2000);
   };
 
