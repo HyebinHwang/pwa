@@ -8,9 +8,12 @@ import { VitePWA } from "vite-plugin-pwa";
 export default defineConfig({
   base: "/pwa/",
   plugins: [react(), VitePWA({ registerType: "autoUpdate" })],
-  resolve: {
-    alias: {
-      "@": fileURLToPath(new URL("./src", import.meta.url)),
+  build: {
+    rollupOptions: {
+      input: {
+        main: "index.html",
+        404: "public/404.html",
+      },
     },
   },
 });
