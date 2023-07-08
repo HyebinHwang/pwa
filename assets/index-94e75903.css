@@ -1,0 +1,1 @@
+@keyframes fade-in{0%{right:0}to{right:100%}}@keyframes to-left{0%{right:-100%}to{right:0%}}::view-transition-new(root){animation:.5s to-left}::view-transition-old(root){animation:.5s fade-in}
