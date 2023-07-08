@@ -35,6 +35,5 @@
     "vite": "^4.3.2",
     "vite-plugin-pwa": "^0.15.1"
   },
-  "packageManager": "yarn@3.6.1",
-  "homepage": "https://hyebinhwang.github.io/pwa/"
+  "packageManager": "yarn@3.6.1"
 }
