@@ -3,12 +3,14 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react-swc";
 import { VitePWA } from "vite-plugin-pwa";
 import tsconfigPaths from "vite-tsconfig-paths";
+import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig({
   resolve: {
     alias: {
-      "@": fileURLToPath(new URL("./src/pwa", import.meta.url)),
+      find: "@",
+      replacement: path.resolve(__dirname, "pwa"),
     },
   },
   base: "/pwa/",
