@@ -10,8 +10,7 @@ export default defineConfig({
   base: "/pwa/",
   resolve: {
     alias: {
-      find: "@",
-      replacement: path.resolve(__dirname, "pwa"),
+      "@": path.resolve(__dirname, "/src/pwa"),
     },
   },
   plugins: [
