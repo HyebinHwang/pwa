@@ -1,5 +1,18 @@
 /// <reference lib="webworker" />
 
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker
+    .register("/sw.ts")
+    .then((registration) => {
+      console.log("Service worker registration succeeded:", registration);
+    })
+    .catch((err) => {
+      console.log("Service worker registration failed:", err);
+    });
+} else {
+  console.log("Service workers are not supported.");
+}
+
 const cacheName = "rsp-v24";
 const cacheFiles = [
   "/index.html",
