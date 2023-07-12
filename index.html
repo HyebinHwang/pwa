@@ -18,6 +18,7 @@
         navigator.serviceWorker
           .register("/pwa/sw.js")
           .then((registration) => {
+            console.log("123123123");
             console.log("Service worker registration succeeded:", registration);
           })
           .catch((err) => {
