@@ -189,7 +189,7 @@ function RockScissorPaper({
   imageCount,
 }: RockScissorPaperProps) {
   const currentImageCount = imageCount % 3;
-  const intervalRef = useRef<NodeJS.Timer>();
+  const intervalRef = useRef<number>();
 
   useEffect(() => {
     if (isWaiting) {
