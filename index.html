@@ -11,14 +11,20 @@
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
-    <script>
+    <script type="module">
       if ("serviceWorker" in navigator) {
-        const serviceWorkerPath = import.meta.env.MODE === 'development' ? '/sw.ts' : '/assets/sw.[hash].js';
-        navigator.serviceWorker.register(serviceWorkerPath).then((registration) => {
-          console.log("Service worker registration succeeded:", registration);
-        }).catch((error) => {
-          console.log("Service worker registration failed:", error);
-        });
+        const serviceWorkerPath =
+          import.meta.env.MODE === "development"
+            ? "/sw.ts"
+            : "/assets/sw.[hash].js";
+        navigator.serviceWorker
+          .register(serviceWorkerPath)
+          .then((registration) => {
+            console.log("Service worker registration succeeded:", registration);
+          })
+          .catch((error) => {
+            console.log("Service worker registration failed:", error);
+          });
       } else {
         console.log("Service workers are not supported.");
       }
