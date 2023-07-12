@@ -5,4 +5,12 @@ import tsconfigPaths from "vite-tsconfig-paths";
 export default defineConfig({
   base: "/pwa/",
   plugins: [tsconfigPaths()],
+  build: {
+    rollupOptions: {
+      input: {
+        main: "./index.html",
+        sw: "./sw.ts",
+      },
+    },
+  },
 });
